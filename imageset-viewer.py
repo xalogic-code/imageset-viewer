@@ -44,7 +44,7 @@ class PascalVOC2007XML:
 
 
 class App:
-    def __init__(self, master, im_dir=None, show_x=None, show_y=None, box_thick=1):
+    def __init__(self, master, im_dir=None, show_x=640, show_y=448, box_thick=1):
         # 加载图像：tk不支持直接使用jpg图片。需要Pillow模块进行中转
         """
         @param im_dir: 包含图片的路径，也就是"JPEGImages". 要求它的同级目录中包含Annotations目录，里面包含各种xml文件。
@@ -197,7 +197,7 @@ if __name__ == '__main__':
     ## eg3: 指定画框的宽度
     app = App(root, im_dir, box_thick=2)
     # 或者更多的指定：
-    app = App(root, im_dir, show_x=1000, show_y=1000, box_thick=2)
+    app = App(root, im_dir, show_x=500, show_y=500, box_thick=2)
     """
 
     #进入消息循环
